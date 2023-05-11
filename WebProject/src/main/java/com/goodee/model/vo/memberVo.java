@@ -2,7 +2,7 @@ package com.goodee.model.vo;
 
 import java.sql.Date;
 
-public class memberVo {
+public class MemberVo {
 
 	private int    userNo;
 	private String userId;
@@ -16,11 +16,11 @@ public class memberVo {
 	private String hobby;
 	private Date   enroll_date;
 	
-	public memberVo() {}
+	public MemberVo() {}
 	
 	
 
-	public memberVo(int userNo, String userId, String userPwd, String userName, String gender, int age, String email,
+	public MemberVo(int userNo, String userId, String userPwd, String userName, String gender, int age, String email,
 			String phone, String address, String hobby, Date enroll_date) {
 		super();
 		this.userNo = userNo;

@@ -3,9 +3,8 @@
 <%@ page import="com.goodee.model.vo.*" %>    
 
 <%
-	memberVo m = (memberVo)request.getAttribute("member");
-
-%>
+    MemberVo m = (MemberVo)request.getAttribute("member");
+    %>
     
 <!DOCTYPE html>
 <html>

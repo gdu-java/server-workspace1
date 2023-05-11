@@ -7,12 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.goodee.model.vo.memberVo;
+import com.goodee.model.vo.MemberVo;
 
-public class memberDao {
-	public ArrayList<memberVo> selectMember() {
+public class MemberDao {
+	public ArrayList<MemberVo> selectMember() {
 		
-		ArrayList<memberVo> list = new ArrayList<>();
+		ArrayList<MemberVo> list = new ArrayList<>();
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -30,7 +30,7 @@ public class memberDao {
 			rset = pstmt.executeQuery();
 			
 			while(rset.next()) {
-				memberVo m = new memberVo();
+				MemberVo m = new MemberVo();
 				
 				m.setUserNo(rset.getInt("user_no"));
 				m.setUserId(rset.getString("user_id"));
@@ -67,7 +67,7 @@ public class memberDao {
 		return list;
 	}
 	
-	public int insertMember(memberVo m) {
+	public int insertMember(MemberVo m) {
 		int result = 0;
 		
 		Connection conn = null;
@@ -114,8 +114,8 @@ public class memberDao {
 		return result;
 	}
 	
-	public memberVo selectOneMember(String userId) {
-		memberVo m = null;
+	public MemberVo selectOneMember(String userId) {
+		MemberVo m = null;
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -134,7 +134,7 @@ public class memberDao {
 			rset = pstmt.executeQuery();
 			
 			if(rset.next()) {
-				m = new memberVo();
+				m = new MemberVo();
 				m.setUserId(rset.getString("user_id"));
 				m.setUserName(rset.getString("user_name"));
 				m.setGender(rset.getString("gender"));

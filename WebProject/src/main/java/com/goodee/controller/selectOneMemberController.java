@@ -8,20 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.goodee.model.dao.memberDao;
-import com.goodee.model.vo.memberVo;
+import com.goodee.model.dao.MemberDao;
+import com.goodee.model.vo.MemberVo;
 
 /**
  * Servlet implementation class selectOneMemberController
  */
 @WebServlet("/selectOneMember")
-public class selectOneMemberController extends HttpServlet {
+public class SelectOneMemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public selectOneMemberController() {
+    public SelectOneMemberController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,9 +33,9 @@ public class selectOneMemberController extends HttpServlet {
 		String userId = request.getParameter("userId");
 		
 		
-		memberDao mDao = new memberDao();
+		MemberDao mDao = new MemberDao();
 		
-		memberVo m = mDao.selectOneMember(userId);
+		MemberVo m = mDao.selectOneMember(userId);
 		
 		if(m != null) {
 			request.setAttribute("member", m);

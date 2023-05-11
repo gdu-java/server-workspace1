@@ -8,20 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.goodee.model.dao.memberDao;
-import com.goodee.model.vo.memberVo;
+import com.goodee.model.dao.MemberDao;
+import com.goodee.model.vo.MemberVo;
 
 /**
  * Servlet implementation class memberInsertController
  */
 @WebServlet("/memberInsertController")
-public class memberInsertController extends HttpServlet {
+public class MemberInsertController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public memberInsertController() {
+    public MemberInsertController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,7 +44,7 @@ public class memberInsertController extends HttpServlet {
 		String hobby = request.getParameter("hobby");
 		System.out.println(userName);
 		//2.memberVo��ü ���� �� �� ���
-		memberVo m = new memberVo();
+		MemberVo m = new MemberVo();
 		
 		m.setUserId(userId);
 		m.setUserPwd(userPwd);
@@ -57,7 +57,7 @@ public class memberInsertController extends HttpServlet {
 		m.setHobby(hobby);
 		
 		//3.memberDao ��ü ���� �� insertMember() �޼��� ȣ��
-		memberDao mDao = new memberDao();
+		MemberDao mDao = new MemberDao();
 		
 	    int result = 0;
 	    

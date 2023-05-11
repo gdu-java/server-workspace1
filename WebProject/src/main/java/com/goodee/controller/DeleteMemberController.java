@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.goodee.model.dao.memberDao;
+import com.goodee.model.dao.MemberDao;
 
 /**
  * Servlet implementation class DeleteMemberController
@@ -32,7 +32,7 @@ public class DeleteMemberController extends HttpServlet {
 		
 		String userId = request.getParameter("userId");
 
-		memberDao mDao = new memberDao();
+		MemberDao mDao = new MemberDao();
 		
 		int result = mDao.deleteMember(userId);
 		

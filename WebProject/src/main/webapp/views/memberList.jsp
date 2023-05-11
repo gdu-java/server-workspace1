@@ -18,9 +18,8 @@
 <body>
 	<h1 align="center"> 회원 목록 </h1>
 <%
-	request.setCharacterEncoding("utf-8");
-	ArrayList<memberVo> list = (ArrayList<memberVo>)request.getAttribute("list");
-	
+request.setCharacterEncoding("utf-8");
+	ArrayList<MemberVo> list = (ArrayList<MemberVo>)request.getAttribute("list");
 %>
 
 
@@ -35,7 +34,9 @@
 		<td>취미</td>
 		<td>가입일</td>
 	</tr>
-	<% 	for(memberVo m : list){ %>
+	<%
+	for(MemberVo m : list){
+	%>
 	<tr>
 		<td> <%= m.getUserId() %> </td>
 		<td> <%= m.getUserName() %></td>

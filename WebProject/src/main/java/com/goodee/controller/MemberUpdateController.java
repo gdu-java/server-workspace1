@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.goodee.model.dao.memberDao;
-import com.goodee.model.vo.memberVo;
+import com.goodee.model.dao.MemberDao;
+import com.goodee.model.vo.MemberVo;
 
 /**
  * Servlet implementation class MemberUpdateController
@@ -31,9 +31,9 @@ public class MemberUpdateController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userId = request.getParameter("userId");
 		
-		memberDao mDao = new memberDao();
+		MemberDao mDao = new MemberDao();
 		
-		memberVo m = mDao.selectOneMember(userId);
+		MemberVo m = mDao.selectOneMember(userId);
 		
 		request.setAttribute("member", m);
 		request.getRequestDispatcher("/views/memberUpdate.jsp").forward(request, response);
@@ -53,8 +53,8 @@ public class MemberUpdateController extends HttpServlet {
 		String address = request.getParameter("address");
 
 		
-		memberDao mDao = new memberDao();
-		memberVo m = new memberVo();
+		MemberDao mDao = new MemberDao();
+		MemberVo m = new MemberVo();
 		
 		int result = mDao.updateMember(userId, email, phone, address);
 		

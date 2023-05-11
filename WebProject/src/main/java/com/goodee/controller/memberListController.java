@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.goodee.model.dao.memberDao;
-import com.goodee.model.vo.memberVo;
+import com.goodee.model.dao.MemberDao;
+import com.goodee.model.vo.MemberVo;
 
 /**
  * Servlet implementation class memberListController
  */
 @WebServlet("/memberListController")
-public class memberListController extends HttpServlet {
+public class MemberListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public memberListController() {
+    public MemberListController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,9 +32,9 @@ public class memberListController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		memberDao m = new memberDao();
+		MemberDao m = new MemberDao();
 		
-		ArrayList<memberVo> list = new ArrayList<>();
+		ArrayList<MemberVo> list = new ArrayList<>();
 		
 		list = m.selectMember();
 		
