@@ -1,35 +1,35 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>È¸¿ø µî·Ï</h1>
-	<form action="/WebProject/memberInsertController" method="put">
-		<label for="name">ÀÌ¸§</label>
-		<input type="text" name="memberName" id="name"><br>
+	<h1>íšŒì› ë“±ë¡</h1>
+	<form action="/WebProject/memberInsertController" method="post">
+		<label for="name">ì´ë¦„</label>
+		<input type="text" name="userName" id="name"><br>
 		<label for="id">ID</label>
-		<input type="text" name="memberId" id="id"><br>
-		<label for="pwd">ÆÐ½º¿öµå</label>
+		<input type="text" name="userId" id="id"><br>
+		<label for="pwd">íŒ¨ìŠ¤ì›Œë“œ</label>
 		<input type="password" name="userPwd" id="pwd"><br>
-		<input type="radio" name="gender" value="M">³²
-		<input type="radio" name="gender" value="F">¿©<br>
-		<label for="age">³ªÀÌ</label>
+		<input type="radio" name="gender" value="M">ë‚¨
+		<input type="radio" name="gender" value="F">ì—¬<br>
+		<label for="age">ë‚˜ì´</label>
 		<input type="text" name="age" id="age"><br>
-		<label for="email">ÀÌ¸ÞÀÏ</label>
+		<label for="email">ì´ë©”ì¼</label>
 		<input type="email" name="email" id="email"><br>
-		<label for="phone">ÀüÈ­¹øÈ£</label>
+		<label for="phone">ì „í™”ë²ˆí˜¸</label>
 		<input type="text" name="phone" id="phone"><br>
-		<label for="address">ÁÖ¼Ò</label>
+		<label for="address">ì£¼ì†Œ</label>
 		<input type="text" name="address" id="address"><br>
-		<label for="hobby">Ãë¹Ì</label>
+		<label for="hobby">ì·¨ë¯¸</label>
 		<input type="text" name="hobby" id="hobby"><br>
-		<input type="submit" value="°¡ÀÔÇÏ±â">
-		<input type="reset" value="ÀçÀÔ·Â">
-		<a href="memberAdmin.jsp">¸ÞÀÎÀ¸·Î µ¹¾Æ°¡±â</a>
+		<input type="submit" value="ê°€ìž…í•˜ê¸°">
+		<input type="reset" value="ìž¬ìž…ë ¥">
+		<a href="memberAdmin.jsp">ë©”ì¸ìœ¼ë¡œ ëŒì•„ê°€ê¸°</a>
 	</form>
 </body>
 </html>

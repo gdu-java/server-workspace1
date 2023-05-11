@@ -11,7 +11,9 @@
 	
 	<a href="memberAdd.jsp">회원추가</a><br>
 	<a href="/WebProject/memberListController">회원목록보기</a>
-	
-	
+	<form action="/WebProject/selectOneMember">
+	<label for="id">아이디 검색</label><input type="text" name="userId">
+	<input type="submit" value="검색">
+	</form>
 </body>
 </html>

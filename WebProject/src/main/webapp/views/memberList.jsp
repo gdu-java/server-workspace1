@@ -18,6 +18,7 @@
 <body>
 	<h1 align="center"> 회원 목록 </h1>
 <%
+	request.setCharacterEncoding("utf-8");
 	ArrayList<memberVo> list = (ArrayList<memberVo>)request.getAttribute("list");
 	
 %>
