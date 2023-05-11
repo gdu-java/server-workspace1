@@ -6,16 +6,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		border: 1px solid black;
+	}
+</style>
 </head>
 <body>
-	<h1> 회원 목록 </h1>
+	<h1 align="center"> 회원 목록 </h1>
 <%
 	ArrayList<memberVo> list = (ArrayList<memberVo>)request.getAttribute("list");
 	
 %>
 
 
-<table border="1">
+<table style="border: 1px solid black;margin-left:auto;margin-right:auto">
 	<tr>
 		<td>아이디</td>
 		<td>이름</td>
@@ -38,8 +46,13 @@
 		<td> <%= m.getEnroll_date() %></td>
 	</tr>
 	<% 	} %>
+	<tr>
+		<td colspan="8" align="center">
+			<a href="views/memberAdmin.jsp">메인으로 돌아가기</a>
+		</td>	
+	</tr>
 </table>
-	<a href="views/memberAdmin.jsp">메인으로 돌아가기</a>
+
 
 </body>
 </html>
