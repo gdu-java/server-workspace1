@@ -32,12 +32,17 @@ public class selectOneMemberController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userId = request.getParameter("userId");
 		
+		
 		memberDao mDao = new memberDao();
 		
 		memberVo m = mDao.selectOneMember(userId);
 		
-		request.setAttribute("member", m);
-		request.getRequestDispatcher("/views/memberProfile.jsp").forward(request, response);
+		if(m != null) {
+			request.setAttribute("member", m);
+			request.getRequestDispatcher("/views/memberProfile.jsp").forward(request, response);
+		}else {
+			request.getRequestDispatcher("/views/memberAdmin.jsp").forward(request, response);
+		}
 	}
 
 	/**

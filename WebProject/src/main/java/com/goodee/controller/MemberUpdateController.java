@@ -51,8 +51,8 @@ public class MemberUpdateController extends HttpServlet {
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
 		String address = request.getParameter("address");
+
 		
-		System.out.println(userId+email+phone+address);
 		memberDao mDao = new memberDao();
 		memberVo m = new memberVo();
 		

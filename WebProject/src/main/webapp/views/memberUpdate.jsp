@@ -55,10 +55,6 @@
 			<td>
 				<input type="submit" value="회원정보 변경">
 			</td>
-		<tr>
-			<td colspan="2">
-				<a href="/WebProject/deleteMember">회원탈퇴</a>
-			</td>
 		</tr>	
 		<tr>		
 			<td>

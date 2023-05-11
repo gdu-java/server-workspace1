@@ -145,6 +145,7 @@ public class memberDao {
 				m.setHobby(rset.getString("hobby"));
 				
 			}
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
